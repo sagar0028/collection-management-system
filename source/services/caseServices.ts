@@ -30,9 +30,9 @@ class CaseService {
       ];
   
       const result = await Case.aggregate(pipeline);
-      console.log(result)
       return successResponse(result);
     } catch (error) {
+      logger.error(error);
       return failureResponse(error);
     }
   };
