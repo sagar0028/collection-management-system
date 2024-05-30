@@ -1,23 +1,21 @@
-import { Schema, model,Document } from "mongoose";
+import {getModelForClass, prop} from '@typegoose/typegoose';
 
+class CaseModel {
+    @prop({required: true})
+    public bankName?: string;
 
+    @prop({required: true})
+    public propertyName?: string;
 
- export interface ICase extends Document {
-    bankName: string;
-    propertyName: string;
-    city: string;
-    borrowerName: string;
-    createdAt: Date;
+    @prop({required: true})
+    public city?: string;
+
+    @prop({required: true})
+    public borrowerName?: string;
+
+    @prop({required: true})
+    public createdAt?: Date;
 }
 
-const caseSchema = new Schema<ICase>({
-    bankName: { type: String, required: true },
-    propertyName: { type: String, required: true },
-    city: { type: String, required: true },
-    borrowerName: { type: String, required: true },
-    createdAt: { type: Date, required: true },
-  });
-  
-  const Case = model<ICase>('Case', caseSchema);
-  export default Case;
- 
+const Case = getModelForClass(CaseModel);
+export default Case;

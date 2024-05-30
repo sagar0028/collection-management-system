@@ -1,9 +1,10 @@
-import { connect } from "mongoose";
+import {connect} from "mongoose";
 import config from "../config/index";
 import logger from "../utils/logger";
 
 class Mongo {
     private _connectionString: string;
+
     constructor(connectionString: any) {
         this._connectionString = connectionString;
     }
