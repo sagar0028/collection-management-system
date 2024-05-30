@@ -4,7 +4,9 @@
   "main": "source/server.ts",
   "scripts": {
     "dev": "nodemon source/server.ts",
-    "clean": "prettier --write source/"
+    "clean": "prettier --write source/",
+    "build": "rimraf build/ && tsc",
+    "prod": "npm run build && node build/server.js"
   },
   "author": "",
   "license": "ISC",
