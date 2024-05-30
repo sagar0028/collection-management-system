@@ -1,0 +1,33 @@
+{
+  "name": "collection-management-system",
+  "version": "1.0.0",
+  "main": "source/server.ts",
+  "scripts": {
+    "dev": "nodemon source/server.ts",
+    "clean": "prettier --write source/"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.0",
+    "node-cron": "^3.0.3",
+    "nodemon": "^2.0.15",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5",
+    "winston": "^3.6.0",
+    "winston-daily-rotate-file": "^4.6.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/mongoose": "^5.11.97",
+    "@types/node-cron": "^3.0.11",
+    "@types/winston": "^2.4.4"
+  }
+}
